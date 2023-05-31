@@ -40,7 +40,7 @@
                                             <div class="form-group">
                                                 <div class="form-field">
                                                     {{-- <div class="icon"><span class="ion-ios-search"></span></div> --}}
-                                                    <select name="" id="" class="form-control " style="height: 45px !important;" name='type_bien'>
+                                                    <select name="" id="selectInput" class="form-control " style="height: 45px !important;" name='type_bien'>
                                                             <option value="" selected>Type du bien</option>
                                                             @foreach ($type_biens as $type_bien)
                                                                 <option value="{{$type_bien->id}}">{{$type_bien->libelle}}</option>
@@ -161,7 +161,45 @@
                 
             </div>
     </div>
+    
+
+
     <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var selectInput = document.getElementById('selectInput');
+            var additionalInputsContainer = document.getElementById('additionalInputsContainer');
+
+            selectInput.addEventListener('change', function() {
+                var selectedValue = selectInput.value;
+
+                // Envoie de la requête Ajax
+                var url = '/votre_endpoint'; // Endpoint de votre serveur Laravel
+
+                axios.post(url, { selectedValue: selectedValue })
+                    .then(function(response) {
+                        var inputs = response.data.inputs;
+                        renderAdditionalInputs(inputs);
+                    })
+                    .catch(function(error) {
+                        console.error(error);
+                    });
+            });
+
+            function renderAdditionalInputs(inputs) {
+                additionalInputsContainer.innerHTML = ''; // Réinitialise les inputs précédents
+
+                // Ajoute les inputs à partir des données reçues
+                inputs.forEach(function(input) {
+                    var inputElement = document.createElement('input');
+                    inputElement.setAttribute('type', 'text');
+                    inputElement.setAttribute('name', input.name);
+                    additionalInputsContainer.appendChild(inputElement);
+                });
+            }
+        });
+
+
         function previewImages(event){
             var mainImageInput = document.getElementById('main-image-input');
             var preview = document.getElementById('preview');

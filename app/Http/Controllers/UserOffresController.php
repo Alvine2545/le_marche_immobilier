@@ -21,12 +21,12 @@ class UserOffresController extends Controller
     public function indexAchat()
     {
         //$type_biens = TypeBien::all();
-        $biens = BienImmobilier::where('status', true)->where('categorie_id', 1, 'user_id', Auth::user()->id)->get();
+        $biens = BienImmobilier::where('status', true)->where('categorie_id', 1)->where('user_id', Auth::user()->id)->get();
         return view('users.achat', ['biens' => $biens]);
     }
     public function indexLocation()
     {
-        $biens = BienImmobilier::where('status', true)->where('categorie_id', 2, 'user_id', Auth::user()->id)->get();
+        $biens = BienImmobilier::where('status', true)->where('categorie_id', 2)->where('user_id', Auth::user()->id)->get();
         return view('users.location', ['biens' => $biens]);
     }
     public function createLocation()
@@ -59,9 +59,17 @@ class UserOffresController extends Controller
         ]);
         $geonamesData = json_decode($response->getBody(), true);
         $cities = collect($geonamesData['geonames'])->pluck('name')->sort()->toArray();*/
+        
+        $inputs = DB::table('caracteristique_type_biens')
+        ->join('caracteristiques', 'caracteristique_type_biens.caracteristique_id','=', 'caracteristiques.id')
+        ->join('type_biens', 'caracteristique_type_biens.type_bien_id', '=', 'type_biens.id')
+        ->where('type_biens.id', $this->type_bien)
+        ->select('caracteristiques.*')
+        ->get();
+        
         $cities = ['Abomey', 'COTONOU', 'Alibori'];
         //$type_biens = TypeBien::all();
-        return view('users.create', ['cities' => $cities, 'type_biens' => TypeBien::all()]);
+        return view('users.create', ['inputs' => $inputs, 'cities' => $cities, 'type_biens' => TypeBien::all()]);
     }
     public function addOffre(Request $request)
     {
