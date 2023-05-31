@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du Header */
+
+header {
+    height: 20vh;
+}
+
+nav {
+    height: 20vh;
+}
+
+.logo-menu {
+    width: 100%;
+}
+ 
+.offre-line {
+    width: 126%;
+}
+
+/* Fin Style du Header */
+
+
+
+/* Style Section 1 */
+
+.section1 {
+    height: 20vh;
+    background-image: url('../images/banniere-link.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section1-home{
+    height: 20vh;
+        background-image: url('../images/banniere-opacity.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+
+.color-title {
+    color: #1F9908;
+    font-weight: bold;
+}
+
+.section1 h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Fin Style Section 1 */
+
+/* Style Section 2 */
+
+.img-sponsor {
+    border-radius: 20px !important;
+    width: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+     
+}
+
+/* Fin Style Section 2 */
+
+/* Style Section 2 */
+
+.offre {
+    display: flex;
+    border: solid #EFCF4F 5px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.partner {
+    width: 30%;
+    line-height: 10;
+}
+
+.partner img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.services {
+    width: 70%;
+}
+
+.services .btn{
+    background-color: #EFCF4F !important;
+}
+
+/* Fin Style Section 2 */
+
+/* Style Footer */
+
+footer {
+    background-image: url('../images/banniere-footer.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.separator {
+    background: #fff;
+    height: 10px;
+    border-radius: 20px;
+}
+
+.social-media i {
+    font-size: 4em;
+    color: #fff;
+
+}
+
+/* Fin Style Footer */
+
+.contact-section {
+    height: 100%;
+    background-image: url('../images/banniere-contact.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-elements {
+    display: flex;
+    color: #fff;
+}
+
+.contact-elements i{
+    margin-right: 5%;
+    font-size: 2em;
+}
+
+.contact-elements img{
+    width: 10%;
+}
+
+.contact_form{
+    background-color: rgb(209, 206, 206);
+    /* opacity: 0.1; */
+    width: 70vh;
+    border-radius: 10px;
+}
+
+.row-fluid{
+    margin-left: 20%;
+}
+
+.modal-custom{
+    border-radius: 30px;
+        border: solid rgb(241, 196, 45) 3px !important;
+        margin: auto;
+    
+        box-shadow: 0 .225rem .25rem black;
+}
+
+
+/* Ajoutez une animation pour faire clignoter l'étoile */
+@keyframes blink {
+    0% {
+        color: yellow;
+    }
+
+    50% {
+        color: red;
+    }
+
+    100% {
+        color: yellow;
+    }
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 0.2;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.compte{
+        height: 80vh;
+        background-image: url('../images/banniere-contact.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+
+.compte-session{
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 8vh !important;
+    border-radius: 18px;
+}
+
