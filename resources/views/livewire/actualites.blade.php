@@ -31,15 +31,15 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center animate-box" wire:ignore>
                             <h2 class="text-center text-color">Les actualiés</h2>
-                            
+
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="row row-bottom-padded-md">
                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-                        @foreach ($actualites as $actualite)    
-                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">               
+                        @foreach ($actualites as $actualite)
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
                                 <h3 class="title" style="color: black; text-center">{{$actualite->reference}}</h3>
                                 <div class="col-md-12">
                                     <img src="../storage/{{$actualite->photo}}" class="img-fluid" alt="" style="margin: auto; ">
@@ -61,17 +61,16 @@
             </div>
             <div id="">
                 <h3></h3>
-                <div class="container">
-                    
-                    <a style="position:relative;" href="{{route('offre-premium')}}">
-                        <span style="position:fixed;bottom:0; left:85%; color:red;animation: blink 1s infinite; font-size:10em; z-index: 9999;">
+                <div class="container " >
+                    <a  class="position-fixed " href="{{route('offre-premium')}}">
+                        <span class="text-danger position-fixed h-auto w-auto" style="bottom:0;right:5%;animation: blink 1s infinite; font-size:7em;" >
                             &#9733;
                         </span>
-                        <span style="position:fixed;bottom:0;left:85%;color:yellow;animation: blink 1s infinite 0.5s; font-size:10em; z-index: 9999;">
+                        <span class="position-fixed text-warning" style="bottom:0;right:5%;animation: blink 1s infinite 0.5s; font-size:7em;">
                             &#9733;
                         </span>
-                        <span class="text-uppercase" style="z-index: 9999; white-space: pre-wrap; font-weight: bold; color: red; -webkit-text-stroke-color: white; position:fixed;bottom:75px;left:86%;font-size:24px;">  offres
-premium</span>
+                        <span class="text-uppercase text-danger font-weight-bold position-fixed"
+                            style="white-space: pre-wrap; -webkit-text-stroke-color: white;right:6%;bottom:52px;font-size:16px;">  offres <br> premium</span>
                     </a>
                 </div>
                 <footer class="container-fluid mt-5">
