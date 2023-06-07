@@ -10,7 +10,7 @@ use Livewire\Component;
 class AffectationComponent extends Component
 {
     public $biens, $biens_all, $agent;
-    public function render()
+    public function render() 
     {
         $this->biens_all = BienImmobilier::all();
         $this->biens = DB::table('bien_immobilier_users')

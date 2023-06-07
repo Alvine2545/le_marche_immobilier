@@ -44,6 +44,10 @@ class BienImmobilier extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'bien_immobilier_users', 'bien_immobilier_id', 'user_id')->using(BienImmobilierUser::class)->withPivot('agent_id');
+    }
     public function categorie()
     {
         return $this->belongsTo(Categorie::class);

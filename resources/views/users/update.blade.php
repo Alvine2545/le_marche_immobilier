@@ -6,8 +6,8 @@
         <div id="">
                 <h3></h3><br>
                 <div class="container">
-                    <h2 class="text-center text-color">Mettre en vente un bien immobilier</h2>
-                    <h3 class="text-center text-color">Remplissez ce formulaire pour mettre en vente votre bien immobilier</h3><br>
+                    <h2 class="text-center text-color">Modification du bien immobilier</h2>
+                    <h3 class="text-center text-color">Remplissez ce formulaire pour modifier votre bien immobilier en vente</h3><br>
 
                     <div class="row">
                         <h5 class="text-center text-color"></h5>
@@ -27,7 +27,11 @@
                                                         <select id="" class="form-control " style="height: 45px !important;" name='ville' required>
                                                                 <option value="" selected>Situation géographique</option>
                                                                 @for($i = 0; $i < count($cities); $i++)
-                                                                    <option value="{{$cities[$i]}}">{{$cities[$i]}}</option>
+                                                                    @if ($dataEdit->ville == $cities[$i])
+                                                                        <option value="{{$cities[$i]}}" selected>{{$cities[$i]}}</option>
+                                                                    @else
+                                                                        <option value="{{$cities[$i]}}">{{$cities[$i]}}</option>
+                                                                    @endif
                                                                 @endfor
                                                                 
                                                         </select>
@@ -41,7 +45,11 @@
                                                         <select required id="selectInput" class="form-control " style="height: 45px !important;" name='type_bien'>
                                                                 <option value="" selected>Type du bien</option>
                                                                 @foreach ($type_biens as $type_bien)
-                                                                    <option value="{{$type_bien->id}}">{{$type_bien->libelle}}</option>
+                                                                    @if ($dataEdit->type_id == $type_bien->id)
+                                                                        <option value="{{$type_bien->id}}" selected>{{$type_bien->libelle}}</option>
+                                                                    @else
+                                                                        <option value="{{$type_bien->id}}">{{$type_bien->libelle}}</option>
+                                                                    @endif
                                                                 @endforeach
                                                         </select>
                                                     </div>
@@ -51,7 +59,7 @@
                                                 <div class="form-group">
                                                     <div class="form-field">
                                                         {{-- <div class="icon"><span class="ion-ios-search"></span></div> --}}
-                                                        <input required type="text" class="form-control" placeholder="Coût minimal" name='prix_min'>
+                                                        <input required type="text" class="form-control" placeholder="Coût minimal" name='prix_min' value="{{$dataEdit->prix_min}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -59,7 +67,7 @@
                                                 <div class="form-group">
                                                     <div class="form-field">
                                                         {{-- <div class="icon"><span class="ion-ios-search"></span></div> --}}
-                                                        <input required type="text" class="form-control" placeholder="Coût maximal" name='prix_max'>
+                                                        <input required type="text" class="form-control" placeholder="Coût maximal" name='prix_max' value="{{$dataEdit->prix_max}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -84,7 +92,12 @@
                                         <div class="row">
                                             <span>Aperçu des images.</span>
                                             <div class="col-md-12 col-sm-12 col-xs-12 mb-3" style="margin-left: 0%; height: 100%;" id="preview">
-                                                
+                                                @php
+                                                   $images = explode(" ", $dataEdit->photo);
+                                                @endphp
+                                                @for ($i = 0; $i < count($images)-1; $i++)
+                                                    
+                                                @endfor
                                             </div>
                                             <span id="info"></span>
                                             <input type="hidden" name="main_image" id="main-image-input">
@@ -94,7 +107,7 @@
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-left: 0% ;">
                                                 <div class="form-group">
                                                     <div class="form-field">
-                                                        <textarea required name="" id="" cols="30" rows="10" placeholder="Description du bien" class="form-control" name='description'></textarea>
+                                                        <textarea value="{{$dataEdit->description}}" required name="" id="" cols="30" rows="10" placeholder="Description du bien" class="form-control" name='description'></textarea>
                                                     </div>
                                                 </div>
                                             </div>

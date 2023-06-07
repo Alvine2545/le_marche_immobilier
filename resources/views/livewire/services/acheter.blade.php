@@ -1,12 +1,13 @@
 <div class="fh5co-page-title  section1" style="height: 350px;" >
             <div class="overlay"></div>
             <div class="container">
+                
                 <div class="row">
                     <div class="col-md-12 animate-box fadeInUp animated-fast text-center text-color" wire:ignore>
                         <div class="row"><h1></h1></div>
                         <h1 class="title"> Acceuil >> Services >> Acheter</h1> 
                         <div class="div-form" wire:ignore>
-                                <form action="" wire:submit.prevent='recherche(1)' class="search-property-1">
+                                <form action="" wire:submit.prevent='updateData(1)' class="search-property-1">
                                     <div class="row" wire:ignore>
                                         <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 align-items-end">
                                             <div class="form-group">
@@ -108,34 +109,75 @@
             <div id="">
                 <div class="container">
                     <div class="row ">
-                        <div class="col col-md-4 col-sm-4 col-xs-4 animate-box icon-custom" wire:ignore>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <img src="{{asset('images/doctors-1.jpg')}}" class="img-rounded-custom img-responsive"
-                                    style="margin-left: -30.19px;"></i>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-            
-                                <h3 class="title text-color ">Nom du bien</h3>
-                                <h5>1 000 000 FCFA</h5>
-                                <p>Facilis ipsum reprehenderit nemo molestias. Aut.</p>
-                                <!-- <p><a href="#">Learn More</a></p> -->
-                                <hr style="height: 5px; background-color: black;">
-                                <span class="float-right"> <a href="{{url('offres/1')}}" style="color: black; border: none; cursor: pointer; text-decoration: none;"  value="Consulter l'offre"
-                                                class="btn btn-round-custom">Consulter l'offre</a></span>
-                                <div class="row">
-                                    {{-- <div class="col-md-2 col-sm-2 col-xs-2">
-                                        {{-- <span> <i class="icon-rdio"></i> Organisation</span> --}
+                        @if ($recherche)
+                            @if (count($recherche) == 0)
+                                <h3 class="title text-color ">Aucun bien ne correspond à votre recherche</h3>
+                            @else
+                                @foreach ($recherche as $bien)
+                                    <div class=" col-md-3 col-sm-5 col-xs-5 icon-custom mb-4" >
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <img src="{{asset('storage/'.$bien->imagemain)}}" class="img-rounded-custom img-responsive"
+                                                style="margin-left: -30.19px;"></i>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                        
+                                            <h3 class="title text-color ">{{$bien->reference}}</h3>
+                                            <h5>{{$bien->prix_max}}</h5>
+                                            <p>{{$bien->description}}</p>
+                                            <!-- <p><a href="#">Learn More</a></p> -->
+                                            <hr style="height: 5px; background-color: black;">
+                                            <span class="float-right"> <a href="{{url('offres/'.$bien->id)}}" style="color: black; border: none; cursor: pointer; text-decoration: none;"  value="Consulter l'offre"
+                                                            class="btn btn-round-custom">Consulter l'offre</a></span>
+                                            <div class="row">
+                                                {{-- <div class="col-md-2 col-sm-2 col-xs-2">
+                                                    {{-- <span> <i class="icon-rdio"></i> Organisation</span> --}
+                                                </div>
+                                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                                    {{-- <span> <i class="icon-location"></i> Localisation</span> --}
+                                                </div> --}}
+                                                {{-- <div
+                                                    class="col-md-offset-5 col-md-3 col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-5 d-flex justify-content-end">
+                                                    <span class=""> <input href="{{url('offres/1')}}" style="color: black; border: none; cursor: pointer; text-decoration: none;" type="submit" value="Consulter l'offre"
+                                                            class="btn btn-round-custom"></span></div> --}}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        {{-- <span> <i class="icon-location"></i> Localisation</span> --}
-                                    </div> --}}
-                                    {{-- <div
-                                        class="col-md-offset-5 col-md-3 col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-5 d-flex justify-content-end">
-                                        <span class=""> <input href="{{url('offres/1')}}" style="color: black; border: none; cursor: pointer; text-decoration: none;" type="submit" value="Consulter l'offre"
-                                                class="btn btn-round-custom"></span></div> --}}
+                                    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+                                @endforeach
+                            @endif
+                        @else
+                            @foreach ($biens as $bien)
+                                <div class=" col-md-3 col-sm-5 col-xs-5 animate-box icon-custom mb-4" wire:ignore>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <img src="{{asset('storage/'.$bien->imagemain)}}" class="img-rounded-custom img-responsive"
+                                            style="margin-left: -30.19px;"></i>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                    
+                                        <h3 class="title text-color ">{{$bien->reference}}</h3>
+                                        <h5>{{$bien->prix_max}}</h5>
+                                        <p>{{$bien->description}}</p>
+                                        <!-- <p><a href="#">Learn More</a></p> -->
+                                        <hr style="height: 5px; background-color: black;">
+                                        <span class="float-right"> <a href="{{url('offres/'.$bien->id)}}" style="color: black; border: none; cursor: pointer; text-decoration: none;"  value="Consulter l'offre"
+                                                        class="btn btn-round-custom">Consulter l'offre</a></span>
+                                        <div class="row">
+                                            {{-- <div class="col-md-2 col-sm-2 col-xs-2">
+                                                {{-- <span> <i class="icon-rdio"></i> Organisation</span> --}
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                {{-- <span> <i class="icon-location"></i> Localisation</span> --}
+                                            </div> --}}
+                                            {{-- <div
+                                                class="col-md-offset-5 col-md-3 col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-5 d-flex justify-content-end">
+                                                <span class=""> <input href="{{url('offres/1')}}" style="color: black; border: none; cursor: pointer; text-decoration: none;" type="submit" value="Consulter l'offre"
+                                                        class="btn btn-round-custom"></span></div> --}}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="col-md-1 col-sm-1 col-xs-1"></div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div><br>

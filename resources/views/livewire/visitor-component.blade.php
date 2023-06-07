@@ -221,7 +221,7 @@
                         @foreach ($anonces as $item)
                             <div class="col-lg-2 col-md-2 col-sm-5 col-xs-5 d-flex justify-content-end" style="position: relative;">
                                 <div class=" animate-box">
-                                    <img class="" style="width: 90%;" src="storage/{{$item->imagemain}}" alt="">
+                                    <img class="" style="width: 100%;" src="storage/{{$item->imagemain}}" alt="">
                                     <span class="blog-text" style="margin-bottom: -55%; height: 7rem; width: 100%; ">
                                         <a class="btn" href=""
                                             style="color: white; border-radius: 15px; background-color: rgb(241, 196, 45); font-size: 10px;  white-space: pre-wrap;">Consulter les offres des parcelles
@@ -231,7 +231,7 @@
                             </div>
                         @endforeach
 
-                        <div class="col-lg-2 col-md-2 col-sm-5 col-xs-5 d-flex justify-content-end" style="">
+                        {{-- <div class="col-lg-2 col-md-2 col-sm-5 col-xs-5 d-flex justify-content-end" style="">
                             <div class=" animate-box">
                                 <img class="" style="width: 100%;" src="images/property-4.jpg" alt="">
                                 <span class="blog-text">
@@ -240,27 +240,7 @@
                                     </button>
                                 </span>
                             </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2  col-sm-5 col-xs-5 d-flex justify-content-end" style="">
-                            <div class=" animate-box">
-                                <img class="" style="width: 100%;" src="images/property-4.jpg" alt="">
-                                <span class="blog-text" >
-                                    <button class="btn "
-                                        style="color: white; border-radius: 15px; background-color: rgb(241, 196, 45); font-size: 9px; margin-bottom: -60%; height: 7rem; width: 100%; white-space: pre-wrap;">Consulter les offres des parcelles
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2  col-sm-5 col-xs-5 d-flex justify-content-end" style="">
-                            <div class=" animate-box">
-                                <img class="" style="width: 100%;" src="images/property-4.jpg" alt="">
-                                <span class="blog-text" >
-                                    <button class="btn "
-                                        style="color: white; border-radius: 15px; background-color: rgb(241, 196, 45); font-size: 9px; margin-bottom: -60%; height: 7rem; width: 100%; white-space: pre-wrap;">Consulter les offres des parcelles
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
+                        </div> --}}
                         <!-- <div class="clearfix visible-md-block"></div> -->
                     </div>
                 </div>
@@ -269,7 +249,7 @@
                 <h3></h3>
                 <div class="container">
                     @if ($liste == true)
-                        <h2 class="text-center text-color">Toutes les actualités</h2>
+                        <h2 wire:ignore class="text-center text-color">Toutes les actualités</h2>
                         <div class="row">
                             <div class="col-md-12 animate-box" wire:ignore>
                                 <div class="row"> 
@@ -294,6 +274,7 @@
                                                 </div></div>
                                             </div>
                                         </div>
+                                        <hr style="border: solid rgb(243, 239, 8) 3px; height: 5px;">
                                     @endforeach
                                 </div>
                                 
@@ -319,7 +300,8 @@
                                                             echo explode(',', $actualite->description)[0];
                                                         @endphp
                                                     </p> --}}
-                                                    <a style="color: black; font-weight: bold;" href="">Voir plus</a>
+                                                    <a style="color: black; font-weight: bold;"   wire:click="showA">Voir plus</a>
+                                                    {{-- <a style="color: black; font-weight: bold;" href="{{route('show-actualite', $actualite->id)}}">Voir plus</a> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -330,7 +312,7 @@
                         </div><br><br>
                         <div class="row flex-container">
                             <div class="col-md-offset-5 col-xs-offset-3 col-sm-offset-3 col-md-4 col-sm-8 col-xs-8">
-                                <button class="btn btn-custom btn-round-custom" wire:click='allActualite'>Voir toutes l'actualités</button>
+                                <button class="btn btn-custom btn-round-custom" wire:click='redirectToActualite'>Voir toutes l'actualités</button>
                             </div><br><br><br>
                         </div>
                         
@@ -345,6 +327,8 @@
                         <span class="text-uppercase" style="z-index: 9999; white-space: pre-wrap; font-weight: bold; color: red; -webkit-text-stroke-color: white; position:fixed;bottom:75px;left:86%;font-size:24px;">  offres
 premium</span>
                         </a>
+
+                        
                 </div>
     @endif
 </div>

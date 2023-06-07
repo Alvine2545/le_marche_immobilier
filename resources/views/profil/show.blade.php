@@ -3,7 +3,7 @@
     <div class="container-overlap bg-gradient-info text-center">
             <div class="mb-3"><img class="wd-sm rounded-circle img-thumbnail" src="{{asset('admin/img/user/03.jpg')}}" alt="user"></div>
             <div class="text-white">
-              <div class="h3">Jane Frazier</div><small>Aenean condimentum augue sapien.</small>
+              <div class="h3">{{Auth::user()->name}} {{Auth::user()->prenoms}}{{Auth::user()->nameAgence}}</div><small>Aenean condimentum augue sapien.</small>
             </div>
           </div>
           <div class="container container-md mb-3">
@@ -14,7 +14,7 @@
                   <tbody>
                     <tr>
                       <td><em class="ion-ios-document-text icon-fw mr-3"></em>Titre</td>
-                      <td>Research &amp; development</td>
+                      <td>{{Auth::user()->titre}}</td>
                     </tr>
                     <tr>
                       <td><em class="ion-ios-egg icon-fw mr-3"></em>Birthday</td>
@@ -22,7 +22,7 @@
                     </tr>
                     <tr>
                       <td><em class="ion-ios-body icon-fw mr-3"></em>Membre depuis</td>
-                      <td><span class="is-editable text-inherit">05/11/2015</span></td>
+                      <td><span class="is-editable text-inherit">{{Auth::user()->created_at}}</span></td>
                     </tr>
                     <tr>
                       <td><em class="ion-ios-man icon-fw mr-3"></em>Genre</td>
@@ -30,22 +30,22 @@
                     </tr>
                     <tr>
                       <td><em class="ion-ios-home icon-fw mr-3"></em>Address</td>
-                      <td><span class="is-editable text-inherit">Some street, 123</span></td>
+                      <td><span class="is-editable text-inherit">{{Auth::user()->residence}}</span></td>
                     </tr>
                     <tr>
                       <td><em class="ion-ios-mail icon-fw mr-3"></em>Email</td>
-                      <td><span class="is-editable text-inherit"><a href="#">user@mail.com</a></span></td>
+                      <td><span class="is-editable text-inherit"><a href="#">{{Auth::user()->email}}</a></span></td>
                     </tr>
                     <tr>
                       <td><em class="ion-ios-call icon-fw mr-3"></em>Contact téléphonique</td>
-                      <td><span class="is-editable text-inherit">13-123-46578</span></td>
+                      <td><span class="is-editable text-inherit">{{Auth::user()->telephone}}</span></td>
                     </tr>
                   </tbody>
                 </table>
-                <button class="btn btn-info btn-lg float-right mb-3">Modifier mon profil</button>
+                <button class="btn btn-info btn-lg float-right mt-3">Modifier mon profil</button>
               </div>
             </form>
-            <div class="cardbox">
+            {{-- <div class="cardbox">
               <h5 class="cardbox-heading">Activité du compte</h5>
               <div class="cardbox-body pb-0">
                 <p class="float-left mr-3"><em class="p-1 rounded-circle bg-info d-inline-block"></em></p>
@@ -84,7 +84,7 @@
                     <div class="float-left text-muted"><em class="ion-ios-timer mr-2"></em><span>4 hours ago</span></div>
                   </div>
                 </div>
-              </div> --}}
+              </div> --}
               {{-- <div class="cardbox-body">
                 <div class="clearfix">
                   <p class="float-left mr-3"><em class="p-1 rounded-circle bg-primary d-inline-block"></em></p>
@@ -96,7 +96,7 @@
                     </div>
                   </div>
                 </div>
-              </div> --}}
-            </div>
+              </div> --}
+            </div> --}}
     </div>
 @endsection

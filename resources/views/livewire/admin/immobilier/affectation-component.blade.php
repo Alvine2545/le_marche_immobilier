@@ -5,7 +5,7 @@
     <div class="col-lg-4">
                 <div class="cardbox">
                   <div class="cardbox-heading">
-                    <div class="total float-right">$ 1.000</div>
+                    <div class="total float-right">$ 1.000</div> 
                     <h3 class="cardbox-title">Pending</h3>
                   </div>
                   <div class="cardbox-body">

@@ -97,19 +97,20 @@
             <li style="">
               <a href="" class="fh5co-sub-ddown">Services</a>
               <ul class="fh5co-sub-menu">
-                <li class=""><a href="{{url('/0')}}">Achetez</a></li>
-                <li><a href="{{url('/2')}}">Vendez</a></li>
+                <li class=""><a href="{{url('services/0')}}">Achetez</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a href="{{url('services/2')}}">Vendez</a></li>
                 <li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a href="{{url('/1')}}">Mettez en location</a></li>
+                <li><a href="{{url('services/1')}}">Mettez en location</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a href="{{url('/3')}}">Louez</a></li>
+                <li><a href="{{url('services/3')}}">Louez</a></li>
               </ul>
             </li>
             <li style=""><a href="{{url('/offres')}}">Offres des partenaires</a></li>

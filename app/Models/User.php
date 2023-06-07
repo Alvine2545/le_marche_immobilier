@@ -56,8 +56,14 @@ class User extends Authenticatable /*implements MustVerifyEmail*/
     {
         $this->notify(new RegisteredUser);
     }
+    //Agent créateur
     public function bienimmobiliers()
     {
         return $this->hasMany(BienImmobilier::class);
     }
+    //User interesses
+   /* public function bienimmobiliers()
+    {
+        return $this->belongsToMany(User::class, 'bien_immobilier_users', 'bien_immobilier_id', 'agent_id')->using(BienImmobilierUser::class);
+    }*/
 }

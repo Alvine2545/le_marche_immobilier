@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->nullable();
             $table->foreignId('bien_immobilier_id')->constrained('bien_immobiliers')->nullable();
-            $table->integer('agent_id')->nullable();
+            $table->integer('agent_id')->nullable();//celui qui gère le dossier
             $table->timestamps();
         });
     }
