@@ -1,3 +1,4 @@
+
 <div>
 
     <div class="fh5co-page-title div-custom section1" style="height: 50% !important;">
@@ -12,7 +13,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 5%; text-align: center;">
-    
+
                                     <h2 class="h1"></h2>
                                     {{-- @if ($showOffre == true) --}}
                                         <h1 class="title"> <a href="#" > Acceuil</a> >> <a href="#">Offres Des Partenaires</a>
@@ -25,16 +26,16 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>
-    
+
     </div>
     {{-- @if ($showOffre == true) --}}
         <section class="section2 container text-center align-items-center mt-5">
             <div class="row mb-3">
-                <h1 class="color-title">Les Offres Partenaires <button wire:click='becomePartenaire' class="float-right btn btn-primary">Devenir partenaire</button></h1>
+               <h1 class="color-title">Les Offres Partenaires  {{-- <button wire:click='becomePartenaire' class="float-right btn btn-primary">Devenir partenaire</button> --}}</h1>
             </div>
             <div class="row mb-5">
                 <div>
@@ -42,23 +43,23 @@
                 </div>
             </div>
         </section>
-        <section class="section3 container text-center mt-5">
+        <section class="section3 container text-center mt-5  justify-content-center">
             @foreach ($offres as $offre)
-                <div class="row mt-5">
+                <div class="row mt-4 mb-4 container ">
                     <div class="offre p-1">
                         <div class="partner">
-                            <img src="../storage/{{$offre->logo}}" alt="">
+                            <img src="{{asset("images/banniere.jpg")}}" alt="">
                         </div>
                         <div class="services container">
                             <div class="row">
-                                <h3 class="color-title">{{$offre->titre}}</h3>
+                                <h3 class="color-title">{{$offre->titre}} lorem</h3>
                             </div>
                             <div class="row">
                                 <p>{{$offre->description}}.</p>
                             </div>
                             <div class="row">
-                                <div class="col-md-9"></div>
-                                <div class="col-md-3">
+                                <div class=" col-lg-8 col-md-7 "></div>
+                                <div class=" col-lg-4 col-md-5 ">
                                     <a class="btn btn-warning" href="{{$offre->site}}" target="blank">Consulter l'offre</a>
                                 </div>
                             </div>
@@ -138,7 +139,7 @@
                                         <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-3 col-xs-offset-5 " style="margin-left: 0% ;">
                                             <div class="form-group">
                                                 <div class="form-field " style="margin-bottom: 30px; margin-top: 20px;">
-                                                    
+
                                                     <input type="file" aria-describedby="helpId" placeholder="Votre logo" required wire:model="logo" class="">
                                                 </div>
                                             </div>
@@ -170,17 +171,17 @@
                     </div>
                 </div>
     @endif --}}
-<div class="container">
-    <a style="position:relative;" href="{{route('offre-premium')}}">
-        <span style="position:fixed;bottom:0;left:85%;color:red;animation: blink 1s infinite; font-size:10em;">
+
+<div class="container " >
+    <a  class="position-fixed " href="{{route('offre-premium')}}">
+        <span class="text-danger position-fixed h-auto w-auto" style="bottom:0;right:5%;animation: blink 1s infinite; font-size:7em;" >
             &#9733;
         </span>
-        <span style="position:fixed;bottom:0;left:85%;color:yellow;animation: blink 1s infinite 0.5s; font-size:10em;">
+        <span class="position-fixed text-warning" style="bottom:0;right:5%;animation: blink 1s infinite 0.5s; font-size:7em;">
             &#9733;
         </span>
-        <span class="text-uppercase"
-            style="white-space: pre-wrap; font-weight: bold; color: red; -webkit-text-stroke-color: white; position:fixed;bottom:75px;left:86%;font-size:24px;">  offres
-premium</span>
+        <span class="text-uppercase text-danger font-weight-bold position-fixed"
+            style="white-space: pre-wrap; -webkit-text-stroke-color: white;right:6%;bottom:52px;font-size:16px;">  offres <br> premium</span>
     </a>
 </div>
 </div></div>

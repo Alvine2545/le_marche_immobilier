@@ -1,5 +1,5 @@
 ;(function () {
-	
+
 	'use strict';
 
 	var isMobile = {
@@ -24,14 +24,14 @@
 	};
 
 
-	// iPad and iPod detection	
+	// iPad and iPod detection
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);
 	};
 
 	var isiPhone = function(){
 	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
+			(navigator.platform.indexOf("iPhone") != -1) ||
 			(navigator.platform.indexOf("iPod") != -1)
 	    );
 	};
@@ -66,7 +66,7 @@
 
    $('#date-start, #date-end').datepicker();
 
-   [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+   [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
       new SelectFx(el);
    } );
 
@@ -96,6 +96,9 @@
 
 		});
 
+
+
+
 		$('#offcanvas-menu').css('height', $(window).height());
 
 		$(window).resize(function(){
@@ -104,17 +107,17 @@
 
 			$('#offcanvas-menu').css('height', w.height());
 
-			if ( w.width() > 769 ) {
+			if ( w.width() >800 ) {
 				if ( $('body').hasClass('fh5co-offcanvas') ) {
 					$('body').removeClass('fh5co-offcanvas');
 				}
 			}
 
-		});	
+		});
 
 	}
 
-	
+
 
 	// Click outside of the Mobile Menu
 	var mobileMenuOutsideClick = function() {
@@ -136,7 +139,7 @@
 		$('.animate-box').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
+
 				i++;
 
 				$(this.element).addClass('item-animate');
@@ -149,16 +152,16 @@
 							el.removeClass('item-animate');
 						},  k * 50, 'easeInOutExpo' );
 					});
-					
+
 				}, 100);
-				
+
 			}
 
 		} , { offset: '85%' } );
 	};
 
 	var sliderMain = function() {
-		
+
 	  	$('#fh5co-hero .flexslider').flexslider({
 			animation: "fade",
 			slideshowSpeed: 5000,
@@ -178,13 +181,13 @@
 
 	  	});
 
-	  	$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());	
+	  	$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());
 	  	$(window).resize(function(){
-	  		$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());	
+	  		$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());
 	  	});
 
 	};
-	
+
 	var stickyBanner = function() {
 		var $stickyElement = $('.sticky-banner');
 		var sticky;
@@ -194,7 +197,7 @@
 		      offset: 0
 		  })
 		}
-	}; 
+	};
 
 	// Document on load.
 	$(function(){

@@ -1,13 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Style du Header */
 
-header {
+/* header {
     height: 20vh;
-}
+} */
 
 nav {
     height: 20vh;
@@ -16,7 +17,7 @@ nav {
 .logo-menu {
     width: 100%;
 }
- 
+
 .offre-line {
     width: 126%;
 }
@@ -27,12 +28,15 @@ nav {
 
 /* Style Section 1 */
 
+
 .section1 {
     height: 20vh;
     background-image: url('../images/banniere-link.png');
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 
 .section1-home{
@@ -61,7 +65,7 @@ nav {
     border-radius: 20px !important;
     width: 100%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-     
+
 }
 
 /* Fin Style Section 2 */
@@ -99,8 +103,10 @@ nav {
 
 footer {
     background-image: url('../images/banniere-footer.png');
+    object-fit:fill;
     background-position: center;
     background-size: cover;
+    width: auto;
     background-repeat: no-repeat;
 }
 
@@ -155,7 +161,7 @@ footer {
     border-radius: 30px;
         border: solid rgb(241, 196, 45) 3px !important;
         margin: auto;
-    
+
         box-shadow: 0 .225rem .25rem black;
 }
 
