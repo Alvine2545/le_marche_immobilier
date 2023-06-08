@@ -77,7 +77,7 @@
                     </div>
 					</div>
 				</div>
-                <div class="col-md-8">
+    <div class="col-md-8">
                     <div class="property-details">
 							<h3>{{$bien->reference}}</h3>
 							<span class="price">{{$bien->prix_max}}</span>
@@ -92,7 +92,7 @@
                                         style="margin-left: -30.19px;"></i>
                                 </div>
                                 <div class="col-md-9 col-sm-8 col-xs-8"> 
-                
+    
                                     <h1 class="title text-color ">{{$bien->reference}}</h1>
                                     <h3>{{$bien->prix_max}} FCFA</h3>
                                     <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Aut cum mollitia
@@ -115,20 +115,20 @@
         </div>
     </div><br>
                 <div id="">
-                    <div class="container">
-                        <a style="position:relative;" href="#">
-                            {{-- <span style="position:fixed;bottom:0;left:85%;color:red;animation: blink 1s infinite; font-size:10em;">
+                    <div class="container " >
+                        <a  class="position-fixed " href="{{route('offre-premium')}}">
+                            {{-- <span class="text-danger position-fixed h-auto w-auto" style="bottom:0;right:5%;animation: blink 1s infinite; font-size:7em;" >
                                 &#9733;
                             </span>
-                            <span style="position:fixed;bottom:0;left:85%;color:yellow;animation: blink 1s infinite 0.5s; font-size:10em;">
+                            <span class="position-fixed text-warning" style="bottom:0;right:5%;animation: blink 1s infinite 0.5s; font-size:7em;">
                                 &#9733;
                             </span> --}}
-                            <span class="text-uppercase"
-                                style="white-space: pre-wrap; font-weight: bold; color: red; -webkit-text-stroke-color: white; position:fixed;bottom:75px;left:86%;font-size:24px;">  offres
-premium</span>
+                            <span class="text-uppercase text-danger font-weight-bold position-fixed"
+                                style="white-space: pre-wrap; -webkit-text-stroke-color: white;right:6%;bottom:52px;font-size:16px;">  offres <br> premium</span>
                         </a>
                     </div>
                 </div><br>
-                
-    </div>
+        </div>
+
+
 </div>
