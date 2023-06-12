@@ -3,18 +3,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 animate-box fadeInUp animated-fast text-center text-color" wire:ignore>
-                            
-                    <div class="all-title-box">
+                    <div class="row"><h1></h1><h1><h1></h1></h1><h1></h1><h1></h1></div>
+                    <h1 class="title"> Acceuil >> Services >> Mettre en location</h1>
+                    {{-- <div class="all-title-box">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 3%; text-align: center;">
-                                                    
+
                                     <h2 class="h1"></h2>
                                     <h1 class="title"> Acceuil >> Services >> Mettre en location</h1>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -30,10 +31,10 @@
                     <h2 class="text-center text-color">Procédure de mise en location un biens immobiliers</h2>
                     <div class="row">
                         <div class="col-md-12 animate-box" wire:ignore>
-            
+
                             <div class="feature-left">
-                            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur 
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo exercitationem 
+                            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
+                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo exercitationem
                                 inventore consectetur eos! Tempore, cupiditate eum.
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
                                 perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo exercitationem
@@ -53,10 +54,10 @@
             <div id="">
                 <h3></h3>
                 <div class="container">
-                    <h2 class="text-center text-color">Etape 1 : Procédure de mise en location un biens immobiliers</h2>
+                    <h2 class="text-center text-color">Comment ça marche ?</h2>
                     <div class="row">
                         <div class="col-md-12 animate-box" wire:ignore>
-            
+
                             <div class="feature-left">
                             <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
                                 perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
@@ -78,127 +79,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="">
-                <h3></h3>
-                <div class="container">
-                    <h2 class="text-center text-color">Etape 2 : Procédure de mise en location un biens immobiliers</h2>
-                    <div class="row">
-                        <div class="col-md-12 animate-box" wire:ignore>
-            
-                            <div class="feature-left">
-                            <p>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="">
-                <h3></h3>
-                <div class="container">
-                    <h2 class="text-center text-color">Etape 3 : Procédure de mise en location un biens immobiliers</h2>
-                    <div class="row">
-                        <div class="col-md-12 animate-box" wire:ignore>
-            
-                            <div class="feature-left">
-                            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="">
-                <h3></h3>
-                <div class="container">
-                    <h2 class="text-center text-color">Etape 4 : Procédure de mise en location un biens immobiliers</h2>
-                    <div class="row">
-                        <div class="col-md-12 animate-box" wire:ignore>
-            
-                            <div class="feature-left">
-                            <p>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="">
-                <h3></h3>
-                <div class="container">
-                    <h2 class="text-center text-color">Etape 5 : Procédure de mise en location un biens immobiliers</h2>
-                    <div class="row">
-                        <div class="col-md-12 animate-box" wire:ignore>
-            
-                            <div class="feature-left">
-                              <p>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
-                                perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
-                                exercitationem
-                                inventore consectetur eos! Tempore, cupiditate eum.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
             <div id="">
@@ -207,7 +87,7 @@
                     <h3 class="text-center text-color"></h3>
                     <div class="row">
                         <div class="col-md-12 animate-box" wire:ignore>
-            
+
                             <div class="feature-left"> <p class="" style="text-align: center;"> Tempore, cupiditate eum.
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
                                 perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
@@ -216,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-            
+
                 </div>
             </div>
             <div id="">
@@ -285,7 +165,7 @@
                                                 </div>
                                             </div>
                                         @endif --}}
-                                        
+
                                         <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 align-items-end">
                                             <div class="form-group">
                                                 <div class="form-field">
@@ -319,7 +199,7 @@
                                             </div>
                                         </div>
                                     </div><br>
-                                    <div class="row">   
+                                    <div class="row">
                                         <h5 class="text-center text-color">Renseignez les informations sur votre bien</h5>
                                         <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 align-items-end">
                                             <div class="form-group">
@@ -330,7 +210,7 @@
                                                             @for($i = 0; $i < count($cities); $i++)
                                                                 <option value="{{$cities[$i]}}">{{$cities[$i]}}</option>
                                                             @endfor
-                                                            
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -402,7 +282,7 @@
                                         <div class="col-md-5 col-md-offset-6 col-sm-5 col-sm-offset-2 col-xs-2 col-xs-offset-2 btn-text form-control btn btn-primary" style="margin-left: 0% ;">
                                             <div class="">
                                                 <div class="" style="">
-                                                    
+
                                                     <input type="file" class="" wire:ignore wire:model='photos' multiple wire:change='show'>
                                                 </div>
                                             </div>
@@ -421,7 +301,7 @@
                                             rtgfdc
                                             @endif
                                         {{-- @foreach ($photos as $image)
-                                        
+
                                             <label>
                                                 <input type="radio" wire:model="mainImageId" value="">
                                                 <img src="{{ Storage::url('images/'.$image->filename) }}" alt="">
@@ -453,9 +333,9 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
-                
+
             </div>
             <div id="">
                 <h3></h3>
@@ -463,7 +343,7 @@
                     <h3 class="text-center text-color"></h3>
                     <div class="row">
                         <div class="col-md-12 animate-box" wire:ignore>
-            
+
                             <div class="feature-left"> <p class="" style="text-align: center;"> Tempore, cupiditate eum.
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quod eum repellendus tenetur
                                 perferendis harum debitis reiciendis deleniti nisi? Ipsum, architecto praesentium. Quo
@@ -472,20 +352,22 @@
                             </div>
                         </div>
                     </div>
-            
+
                 </div> --}}
-                <a style="position:relative;" href="{{route('offre-premium')}}">
-                    <span style="position:fixed;bottom:0;left:85%;color:red;animation: blink 1s infinite; font-size:10em;">
-                        &#9733;
-                    </span>
-                    <span style="position:fixed;bottom:0;left:85%;color:yellow;animation: blink 1s infinite 0.5s; font-size:10em;">
-                        &#9733;
-                    </span>
-                    <span class="text-uppercase"
-                        style="white-space: pre-wrap; font-weight: bold; color: red; -webkit-text-stroke-color: white; position:fixed;bottom:70px;left:85%;font-size:24px;">  offres
-premium</span>
-                </a>
-                </div>
+
+
+                    <a  class="position-fixed " href="{{route('offre-premium')}}">
+                        <span class="text-danger position-fixed h-auto w-auto" style="bottom:0;right:5%;animation: blink 1s infinite; font-size:7em;" >
+                            &#9733;
+                        </span>
+                        <span class="position-fixed text-warning" style="bottom:0;right:5%;animation: blink 1s infinite 0.5s; font-size:7em;">
+                            &#9733;
+                        </span>
+                        <span class="text-uppercase text-danger font-weight-bold position-fixed"
+                            style="white-space: pre-wrap; -webkit-text-stroke-color: white;right:6%;bottom:52px;font-size:16px;">  offres <br> premium</span>
+                    </a>
+              
+            </div>
                 @push('scripts')
     <script>
         document.addEventListener('livewire:load', function () {

@@ -12,11 +12,11 @@
 
     @push('scripts')
     <script>
-        var cities = @json($cities);
-        $('#city-input').typeahead({
-            source: cities, 
-            autoSelect: true
-        });
+        // var cities = @json($cities);
+        // $('#city-input').typeahead({
+        //     source: cities, 
+        //     autoSelect: true
+        // });
     </script>
     @endpush
 </div>

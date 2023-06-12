@@ -2,6 +2,7 @@
 
 use App\Actions\Fortify\CreateNewUser;
 use App\Http\Controllers\UserOffresController;
+use App\Http\Livewire\ActualiteViewComponent;
 use App\Http\Livewire\AddAttributBienComponent;
 use App\Http\Livewire\Admin\ActualitesComponent;
 use App\Http\Livewire\Admin\AdminHomeComponent;
@@ -40,6 +41,9 @@ use Laravel\Fortify\Http\Controllers\RegisteredUserController;
 // });
 
 Route::get('/', VisitorComponent::class)->name('/');
+Route::get('/showActualite', ActualiteViewComponent::class)->name('show-actualite');
+Route::get('/details/{article_id}', [ActualiteViewComponent::class, 'details'])->name('details');
+
 Route::get('/contact', ContactComponent::class)->name('contact');
 Route::get('services/{type}', ServicesComponent::class)->name('services');
 Route::get('/offres', OffresComponent::class)->name('offre');
@@ -55,9 +59,17 @@ Route::middleware('auth:web')->group(function(){
     Route::get('achat', [UserOffresController::class, 'indexAchat'])->name('achat');
     Route::get('createA', [UserOffresController::class, 'createAchat'])->name('create-vente');
     Route::post('storeOffre', [UserOffresController::class, 'addOffre'])->name('store-offre');
+    Route::get('show/{id}', [UserOffresController::class, 'dd'])->name('show');
+
+    Route::delete('delete/{$id}', [UserOffresController::class, 'delete'])->name('delete-offre');
+    Route::get('edit/{id}', [UserOffresController::class, 'edit'])->name('edit-offre');
+    Route::put('update/{id}', [UserOffresController::class, 'update'])->name('update-offre');
 
     Route::get('location', [UserOffresController::class, 'indexLocation'])->name('location');
     Route::get('createL', [UserOffresController::class, 'createLocation'])->name('create-location');
+
+    Route::view('profil-setting', 'profil.show');
+    Route::view('notification', 'profil.show');
 
     Route::prefix('users')->name('users.')->group(function(){
 
@@ -73,8 +85,7 @@ Route::middleware('auth:web')->group(function(){
 //Route::view('home', 'users.dashboard');
 //Route::view('achat', 'users.achat');
 //Route::view('location', 'users.location');
-Route::view('profil-setting', 'profil.show');
-Route::view('notification', 'profil.show');
+
 
 //
 // Route::get('loginadmin', function(){ return redirect()->route('admin.login'); })

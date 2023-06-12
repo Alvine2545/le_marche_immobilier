@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  
+
 <!-- Mirrored from themicon.co/theme/dasha/v1.5/html5jquery/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Nov 2020 02:51:57 GMT -->
 <head>
     <meta charset="utf-8">
@@ -24,10 +24,10 @@
     <link rel="shortcut icon" href="images/Logo-1.png">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     {{-- Header css --}}
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -70,7 +70,7 @@
   max-width: 100%;
   height: auto;
 }
-  
+
 </style>
 
   </head>
@@ -78,7 +78,7 @@
   <body class="theme-default">
     <div class="layout-container">
       <!-- top navbar-->
-      <header class="header-container">
+      <header class="header-container ">
         <nav>
           <ul class="d-lg-none">
             <li>
@@ -90,26 +90,26 @@
               <a class="covermode-toggler menu-link menu-link-close" href="#"><span><em></em></span></a>
             </li>
           </ul>
-          <h2 class="header-title"><img class="icon-home img-responsive" style="height: 14vh;" src="images/Logo-1.png" alt=""
-            id="navLogo"></h2>
+          <h2 class="header-title"><img class="icon-home img-responsive" style="height: 14vh;" src="images/Logo-1.png" alt="" id="navLogo"></h2>
           <ul class="float-right sf-menu" id="fh5co-primary-menu">
             <li class="active" style=""><a href="{{url('/')}}" style="">Acceuil</a></li>
             <li style="">
               <a href="" class="fh5co-sub-ddown">Services</a>
               <ul class="fh5co-sub-menu">
-                <li class=""><a href="{{url('/0')}}">Achetez</a></li>
-                <li><a href="{{url('/2')}}">Vendez</a></li>
+                <li class=""><a href="{{url('services/0')}}">Achetez</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a href="{{url('services/2')}}">Vendez</a></li>
                 <li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a href="{{url('/1')}}">Mettez en location</a></li>
+                <li><a href="{{url('services/1')}}">Mettez en location</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a href="{{url('/3')}}">Louez</a></li>
+                <li><a href="{{url('services/3')}}">Louez</a></li>
               </ul>
             </li>
             <li style=""><a href="{{url('/offres')}}">Offres des partenaires</a></li>
@@ -174,7 +174,7 @@
                   <li>
                     <a href="{{url('location')}}"><span class="float-right nav-label"></span><span>Location</span></a>
                   </li>
-                  
+
                 </ul>
               </li>
               <li>
@@ -187,7 +187,7 @@
       {{-- <div class="sidebar-layout-obfuscator"></div> --}}
       <!-- Main section-->
       <main class="main-container container" style="background-color: #ffffff;">
-        
+
         <!-- Page content-->
         <section class="section-container" style="margin-left: 30px; margin-right: 30px;">
           @yield('content')
@@ -443,8 +443,8 @@
     <!-- App script-->
     <script src="{{asset('admin/js/app.js')}}"></script>
     <script>
-        window.addEventListener('alert', event => { 
-             toastr[event.detail.type](event.detail.message, 
+        window.addEventListener('alert', event => {
+             toastr[event.detail.type](event.detail.message,
              event.detail.title ?? ''), toastr.options = {
                     "closeButton": true,
                     "progressBar": true,

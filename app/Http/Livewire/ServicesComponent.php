@@ -19,7 +19,7 @@ class ServicesComponent extends Component
     public $mesbudgets, $meslocalisations, $mestypes;
     public $currentSteep, $totalSteep = 3;
    public $typeService, $cities;
-   public $biens;
+   public $biens, $recherche;
    public $type_user, $type_biens, $budgetA, $budgetL, $inputs = [], $colonne_names = [], $inputdata = [], $images = [] ;
    public $type_bien, $description, $name, $surname, $telephone, $email, $reference, $prix_min, $prix_max, $surface, $ville, $photos = [], $mainImageId, $photo;
 
@@ -150,7 +150,7 @@ class ServicesComponent extends Component
         //Les biens
         $this->biens = BienImmobilier::all()->where('status', true);
         $this->cities = ['Abomey', 'COTONOU', 'Alibori'];
-       /* $client = new Client();
+       /* $client = new Client(); 
         $response = $client->request('GET', 'http://api.geonames.org/searchJSON', [
             'query' => [
                 'q' => '',
@@ -199,12 +199,18 @@ class ServicesComponent extends Component
             dd($this->images);
         //$this->photo = $this->photo->first();
     }
-
+public function aaa()
+{
+    # code...
+    dd('dfg');
+}
 
     public function increaseSteep(){
+        dd('fgvc');
         //$this->resetErrorBag();
         //$this->validateData();
         $this->currentSteep++;
+
         
         
         //$this->choix = $this->roles[0];
@@ -222,12 +228,12 @@ class ServicesComponent extends Component
     }
 
 
-    public function recherche($categori_id)
+    public function updateData($categori_id)
     {
         if ($this->mestypes != null) {
 
-            $this->biens = BienImmobilier::all()->where('categorie_id', $categori_id)->where('type_id', $this->mestypes)->where('status', true);
-        
+            $this->recherche = BienImmobilier::all()->where('categorie_id', $categori_id)->where('type_id', $this->mestypes)->where('status', true);
+            //$this->mount(0);
         } elseif ($this->meslocalisations != null) {
             
             $this->biens = BienImmobilier::all()->where('categorie_id', $categori_id)->where('ville', $this->meslocalisations);

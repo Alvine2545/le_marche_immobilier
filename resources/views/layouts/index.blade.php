@@ -35,7 +35,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="{{asset('css/cs-skin-border.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
-    
+
 
     <style>
         .error{
@@ -71,22 +71,22 @@
 	<![endif]-->
     @livewireStyles
 </head>
-
 <body>
     <div id="fh5co-wrapper">
         <div id="fh5co-page">
             <header id="fh5co-header-section" class="sticky-banner">
-                <div class="container">
-                    <div class="nav-header">
-                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-                        <h1 id="fh5co-logo"><a href="{{route('/')}}"><img class="icon-home img-responsive" style="height: 150px; margin-top: -45px;" src="{{asset('images/Logo-1.png')}}"
-                                                alt="" id="navLogo"> </a></h1>
-                        <!-- START #fh5co-menu-wrap -->
-                        
-                        <nav id="fh5co-menu-wrap" role="navigation">
-                            <ul class="sf-menu " id="fh5co-primary-menu">
-                                    <li class="active" style=""><a href="{{url('/')}}" style="margin-top: 30px;">Acceuil</a></li>
-                                    <li style="margin-top: 30px; ">
+                <div class="container header-section ">
+                    <div class="nav-header align-items-center d-flex">
+
+                            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark "><i></i></a>
+                        <div>
+                            <h1 class="" id="fh5co-logo"><a href="{{route('/')}}"><img class="" style="height: 120px;" src="{{asset('images/Logo-1.png')}}" alt="" id="navLogo"> </a></h1>
+                            <!-- START #fh5co-menu-wrap -->
+                        </div>
+                        <nav class="col" id="fh5co-menu-wrap" role="navigation">
+                            <ul class="sf-menu" id="fh5co-primary-menu">
+                                    <li class="active" style=""><a href="{{url('/')}}">Acceuil</a></li>
+                                    <li >
                                         <a href="" class="fh5co-sub-ddown">Services</a>
                                         <ul class="fh5co-sub-menu">
                                             <li class=""><a href="{{url('services/0')}}">Achetez</a></li>
@@ -105,14 +105,14 @@
                                             <li><a href="{{url('services/2')}}">Vendez</a></li>
                                         </ul>
                                     </li>
-                                    <li style="margin-top: 30px; " class="fh5co-sub-ddown"><a href="{{url('/offres')}}">Offres des partenaires</a>
+                                    <li  class="fh5co-sub-ddown"><a href="{{url('/offres')}}">Offres des partenaires</a>
                                         {{-- <ul class="fh5co-sub-menu">
                                             <li class=""><a href="{{url('offres')}}">Devenire partenaire</a></li>
                                         </ul> --}}
                                     </li>
-                                    <li style="margin-top: 30px; "><a href="{{route('contact')}}">Contact</a></li>
+                                    <li ><a href="{{route('contact')}}">Contact</a></li>
                                     @guest('admin')
-                                        <li style="margin-top: 20px; ">
+                                        <li>
                                             <a href="" class="" data-toggle="modal" data-target="#exampleModal">
                                                 <i class="fa-solid fa-circle-user" style="font-size: 3em; color: #EFCF4F ;"></i>
                                             </a>
@@ -122,22 +122,22 @@
                                         <form id="mon-form" action="{{route('logout')}}" method="POST" style="">
                                             @csrf
                                             <li style="margin-top: 28px; ">
-                                                <a type="submit" class="" style="background: none; border: none; cursor: pointer;">
+                                                <a type="submit" class="" style="background:none; border: none; cursor: pointer;">
                                                     <i class="fa fa-sign-out " style="font-size: 1em; color: #EFCF4F ;"></i> Se déconnecter
                                                 </a>
                                             </li>
                                         </form>
-                                    @endauth  
+                                    @endauth
                                 </ul>
-                                
+
                         </nav>
                     </div>
                 </div>
 		    </header>
             <!-- Modal -->
-            <div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade bg-light " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-md " role="document">
+                <div class="modal-dialog modal-dialog-centered modal-md" role="document">
                     <div class="modal-content modal-custom">
                         <!-- <div class="modal-header">
                             <h5 class="modal-title text-center" id="exampleModalLabel" style="color: #EFCF4F; font-weight: bold; text-align: center !important;">Connectez vous à votre compte</h5>
@@ -166,7 +166,7 @@
                                     <input type="password" class="form-control modal-custom" id="exampleFormControlInput1"
                                         placeholder="Votre mot de passe" name="password">
                                 </div>
-                            
+
                                 <p>Vous n'avez pas de compte ? Créez un compte <a class="text-black" data-toggle="modal"
                                         data-target="#incriptionModal">ici</a></p><br>
                                 <button type="submit" class="btn btn-custom btn-block">Connexion</button>
@@ -288,16 +288,17 @@
     <!-- Main JS -->
     <script src="{{asset('js/main.js')}}"></script>
     <script>
-        window.addEventListener('alert', event => { 
-             toastr[event.detail.type](event.detail.message, 
+        window.addEventListener('alert', event => {
+             toastr[event.detail.type](event.detail.message,
              event.detail.title ?? ''), toastr.options = {
                     "closeButton": true,
                     "progressBar": true,
                 }
             });
 </script>
+
 @stack('scripts')
-    @livewireScripts
+@livewireScripts
 </body>
 
 </html>

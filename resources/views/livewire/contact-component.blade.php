@@ -8,7 +8,7 @@
                         <i class="fa-solid fa-location-dot p-1"></i>
                         <p class="text-light">MARCHE DE l’IMMOBILIER</p>
                     </div>
-                    
+
                     <div class="mail-box contact-elements  mt-4">
                         <img class="p-1" src="images/mailbox.svg" alt="">
                         <p class="text-light">  04 BP : 0338 Cotonou</p>
@@ -25,7 +25,7 @@
                     <i class="fa-solid fa-globe p-1"></i>
                     Site web : <a href="www.marchedelimmobilier.bj" style="text-decoration: none" class="text-light">www.marchedelimmobilier.bj </a>
                 </div>
-                
+
                 <div class="mail-box contact-elements  mt-4">
                     <img src="images/mailbox.svg" alt="">
                     <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -79,17 +79,16 @@
             </div>
         </div>
     </section>
-    <div class="container">
-    <a style="position:relative;" href="{{route('offre-premium')}}">
-        <span style="position:fixed;bottom:0;left:85%;color:red;animation: blink 1s infinite; font-size:10em;">
-            &#9733;
-        </span>
-        <span style="position:fixed;bottom:0;left:85%;color:yellow;animation: blink 1s infinite 0.5s; font-size:10em;">
-            &#9733;
-        </span>
-        <span class="text-uppercase"
-            style="white-space: pre-wrap; font-weight: bold; color: red; -webkit-text-stroke-color: white; position:fixed;bottom:75px;left:86%;font-size:24px;">  offres
-premium</span>
-    </a>
-</div>
+    <div class="container " >
+        <a  class="position-fixed " href="{{route('offre-premium')}}">
+            <span class="text-danger position-fixed h-auto w-auto" style="bottom:0;right:5%;animation: blink 1s infinite; font-size:7em;" >
+                &#9733;
+            </span>
+            <span class="position-fixed text-warning" style="bottom:0;right:5%;animation: blink 1s infinite 0.5s; font-size:7em;">
+                &#9733;
+            </span>
+            <span class="text-uppercase text-danger font-weight-bold position-fixed"
+                style="white-space: pre-wrap; -webkit-text-stroke-color: white;right:6%;bottom:52px;font-size:16px;">  offres <br> premium</span>
+        </a>
+    </div>
 </div>
