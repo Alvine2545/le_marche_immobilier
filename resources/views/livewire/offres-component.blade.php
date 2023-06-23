@@ -172,15 +172,17 @@
     @endif
     <div class="container " >
         <a  class="position-fixed " href="{{route('offre-premium')}}">
-            <span class="text-danger position-fixed h-auto w-auto" style="bottom:0;right:5%;animation: blink 1s infinite; font-size:7em;" >
-                &#9733;
-            </span>
-            <span class="position-fixed text-warning" style="bottom:0;right:5%;animation: blink 1s infinite 0.5s; font-size:7em;">
-                &#9733;
-            </span>
-            <span class="text-uppercase text-danger font-weight-bold position-fixed"
-                style="white-space: pre-wrap; -webkit-text-stroke-color: white;right:6%;bottom:52px;font-size:16px;">  offres <br> premium</span>
-        </a>
+                        {{-- <span class="text-danger position-fixed h-auto w-auto" style="bottom:0;right:5%;animation: blink 1s infinite; font-size:7em;" >
+                            &#9733;
+                        </span>
+                        <span class="position-fixed text-warning" style="bottom:0;right:5%;animation: blink 1s infinite 0.5s; font-size:7em;">
+                            &#9733;
+                        </span> --}}
+                        <span class="text-uppercase text-danger font-weight-bold position-fixed"
+                            style="white-space: pre-wrap; -webkit-text-stroke-color: white;right:6%;bottom:40px;font-size:16px; animation: blink 1s infinite 0.5s;">  offres <br> premium</span>
+                        <span class="text-uppercase text-danger font-weight-bold position-fixed"
+                            style="white-space: pre-wrap; -webkit-text-stroke-color: white;right:6%;bottom:40px;font-size:16px; animation: blink 1s infinite 0.5s;">  offres <br> premium</span>
+                    </a>
     </div>
 </div></div>
 

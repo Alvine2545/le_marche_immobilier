@@ -43,7 +43,7 @@ class ServicesComponent extends Component
         $this->type_user ='';
    }
    public function store_bien_location()
-   {   
+   { 
     
        $user = User::create([
             'name' => $this->name,
@@ -149,7 +149,8 @@ class ServicesComponent extends Component
         ->get(); 
         //Les biens
         $this->biens = BienImmobilier::all()->where('status', true);
-        $this->cities = ['Abomey', 'COTONOU', 'Alibori'];
+        // Grand-Popo, Houéyogbé, Ifangni, Kalalé, Kandi, Karimama, Kérou, Kétou,  Klouékanmè, Kouandé, Kpomassè, Lalo, Lokossa, Malanville, Matéri, Missérété, N’dali, Natitingou, Nikki, Ouaké, Ouèssè, Ouidah, Ouinhi, Parakou, Pehunco, Pèrèrè, Pobè, Porto-Novo, Sakété, Savalou, Savè, Ségbana, Sèmè-Podji, Sinendé, Sô-Ava, Tanguiéta,  
+        $this->cities = ['Abomey', 'Abomey-Calavi', 'Adja-Ouèrè', 'Adjarra', 'Adjohoun', 'Agbangnizoun', 'Aguégués', 'Allada', 'Aplahoué', 'Athiémé', 'Avrankou', 'Banikoara', 'Bantè', 'Bassila', 'Bembèrèkè', 'Bohicon', 'Bonou', 'Bopa', 'Boukombé', 'Cobly', 'Comè', 'Copargo', 'Cotonou', 'Covè', 'Dangbo', 'Dassa-Zoumè', 'Djakotomey', 'Djidja', 'Djougou', 'Gogounou', 'Dogbo', 'Glazoué', 'Zogbodomey', 'Zè', 'Za-Kpota', 'Zagnanado', 'Toviklin', 'Toucountouna', 'Tori-Bossito', 'Toffo', 'Tchaourou', ''];
        /* $client = new Client(); 
         $response = $client->request('GET', 'http://api.geonames.org/searchJSON', [
             'query' => [
@@ -199,14 +200,9 @@ class ServicesComponent extends Component
             dd($this->images);
         //$this->photo = $this->photo->first();
     }
-public function aaa()
-{
-    # code...
-    dd('dfg');
-}
+
 
     public function increaseSteep(){
-        dd('fgvc');
         //$this->resetErrorBag();
         //$this->validateData();
         $this->currentSteep++;

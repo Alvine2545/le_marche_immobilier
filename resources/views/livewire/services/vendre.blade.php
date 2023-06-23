@@ -28,7 +28,6 @@
     @if (session()->has('message'))
         <div class="alert alert-success text-center">{{ session('message') }}</div>
     @endif
-    <button type="button" wire:click='aaa'>fghj</button>
             <div id="">
                 <h3></h3>
                 <div class="container">
@@ -191,7 +190,6 @@
                                             </div>
                                             </fieldset>
                                             @endif
-                                            {{$currentSteep}}
                                             <div class="action-button d-flex justify-content-between bg-white pt-2 pb-2" style="margin-right: 2%; margin-top: -2%">
                                                 @if ($currentSteep == 1)
                                                 <div></div>
@@ -462,7 +460,6 @@
 
             </div>
             </div>
-            <button type="button" wire:click='aaa'>gf</button>
             @push('scripts')
                 <script>
                     function previewImages() {

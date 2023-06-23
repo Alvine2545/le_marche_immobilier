@@ -46,7 +46,7 @@ class AddAttributBienComponent extends Component
         $bien = TypeBien::find($this->bien);
         $bien->caracteristique()->attach($carac->id);
 
-        $this->render();
+        $this->render(); 
     }
 
     public function update($id)

@@ -116,7 +116,7 @@
                     <h2 class="text-center text-color">Nos services</h2>
                     <div class=" row animate-box justify-content-center">
 
-                        <div class=" col-lg-3 col-md-4 col-sm-6 col-9 div-custom service-custom mr-3 ml-3 mt-4 mb-4" style="">
+                        <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-9 div-custom service-custom mr-3 ml-3 mt-4 mb-4" style="">
                             <div class=" " style="position-absolute" >
                                 <div class="single-services h-75">
                                     <img src="{{asset("images/partner1.png")}}" class="img-responsive h-100 w-100" alt="" style="object-fit: cover; position:relative;">                              </div>
