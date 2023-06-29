@@ -27,7 +27,7 @@
 </div>
 
             <div id="">
-                <div class="container">
+                <div class="container"> 
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center animate-box" wire:ignore>
                             <h2 class="text-center text-color">Les actualiés</h2>
