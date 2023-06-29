@@ -218,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container"> 
                     <div class="row row-bottom-padded-md justify-content-center">
 
                         @foreach ($anonces as $item)

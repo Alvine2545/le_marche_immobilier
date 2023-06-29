@@ -12,6 +12,7 @@ class Caracteristique extends Model
         'nom',
         'type',
         'description',
+        'showC',
     ];
     public function type_bien()
     {

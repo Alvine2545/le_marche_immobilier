@@ -42,6 +42,7 @@ class AddAttributBienComponent extends Component
             'nom' => $this->nom,
             'description' => $this->description,
             'type' => $this->types,
+            'show' => true,
         ]);
         $bien = TypeBien::find($this->bien);
         $bien->caracteristique()->attach($carac->id);

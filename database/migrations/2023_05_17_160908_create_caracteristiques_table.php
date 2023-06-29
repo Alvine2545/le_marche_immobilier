@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('type');
             $table->string('description');
+            $table->boolean('showC');
             $table->timestamps();
         });
     }

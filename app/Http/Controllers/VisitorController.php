@@ -7,4 +7,7 @@ use Illuminate\Http\Request;
 class VisitorController extends Controller
 {
     //
+    function showAnonce() : Returntype {
+        
+    }
 }
